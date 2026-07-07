@@ -1,0 +1,171 @@
+.chats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Each message row */
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.gptDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Avatars next to messages */
+.msg-avatar {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-bottom: 2px;
+}
+
+.user-avatar-msg {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    order: 2;
+}
+
+.bot-avatar-msg {
+    background-color: var(--card);
+    color: var(--accent);
+    -webkit-text-fill-color: var(--accent);
+    border: 1px solid rgba(250,204,21,0.3);
+}
+
+/* Bubbles */
+.userMessage {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 18px 18px 4px 18px;
+    max-width: 65%;
+    width: fit-content;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* wrapper div that react-markdown renders into */
+.bot-bubble {
+    background-color: var(--card);
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 18px 18px 18px 4px;
+    max-width: 72%;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.bot-bubble p { margin: 0 0 0.4em; }
+.bot-bubble p:last-child { margin-bottom: 0; }
+.bot-bubble ul, .bot-bubble ol { padding-left: 1.2em; margin: 0.4em 0; }
+.bot-bubble li { margin-bottom: 0.2em; }
+
+/* Timestamps */
+.msg-time {
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-top: 3px;
+    padding: 0 4px;
+    text-align: right;
+}
+
+.gptDiv .msg-time { text-align: left; }
+
+/* Code blocks */
+.hljs {
+    border-radius: 10px !important;
+    font-size: 0.8rem;
+}
+
+pre {
+    white-space: pre-wrap;
+    margin: 0.5rem 0;
+}
+
+/* Suggestion cards on welcome screen */
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 560px;
+    margin-top: 1.2rem;
+}
+
+.suggestion-card {
+    background-color: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 14px 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.suggestion-card:hover {
+    border-color: rgba(249, 115, 22, 0.4);
+    background-color: rgba(249, 115, 22, 0.06);
+    transform: translateY(-2px);
+}
+
+.suggestion-icon {
+    font-size: 16px;
+    color: var(--primary);
+    -webkit-text-fill-color: var(--primary);
+    margin-bottom: 2px;
+}
+
+.suggestion-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.suggestion-text {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+/* Keyboard hint */
+.welcome-hint {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+kbd {
+    background-color: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 0.7rem;
+    font-family: monospace;
+    color: var(--text);
+    -webkit-text-fill-color: var(--text);
+}

@@ -1,0 +1,26 @@
+:root {
+    --background: #18181B;
+    --sidebar: #27272A;
+    --card: #3F3F46;
+    --primary: #F97316;
+    --secondary: #EC4899;
+    --accent: #FACC15;
+    --text: #FAFAFA;
+    --muted: #A1A1AA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', Roboto, 'Open Sans', sans-serif;
+}
